@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/sprites/robi.png" type="Texture" id=1]
 [ext_resource path="res://src/Main/StateMachine/StateMachine.gd" type="Script" id=2]
@@ -7,12 +7,15 @@
 [ext_resource path="res://src/Player/Player/Idle.gd" type="Script" id=5]
 [ext_resource path="res://src/Player/Player/Move.gd" type="Script" id=6]
 [ext_resource path="res://src/Player/Player/Player.gd" type="Script" id=7]
+[ext_resource path="res://src/Player/Camera/CameraRig.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.4593, 35.5737 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 7 )
+
+[node name="CameraRig" parent="." instance=ExtResource( 8 )]
 
 [node name="robi" type="Sprite" parent="."]
 position = Vector2( -2.77413, -35.2363 )
