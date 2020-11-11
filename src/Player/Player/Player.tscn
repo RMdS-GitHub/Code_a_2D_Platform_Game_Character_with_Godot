@@ -13,6 +13,7 @@
 extents = Vector2( 33.4593, 35.5737 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 2147483649
 script = ExtResource( 7 )
 
 [node name="CameraRig" parent="." instance=ExtResource( 8 )]
@@ -28,6 +29,7 @@ shape = SubResource( 1 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 2 )
+initial_state = NodePath("Move/Idle")
 
 [node name="Move" type="Node" parent="StateMachine"]
 script = ExtResource( 6 )

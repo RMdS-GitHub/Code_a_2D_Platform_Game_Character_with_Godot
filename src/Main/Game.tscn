@@ -19,6 +19,9 @@ margin_right = 440.0
 mouse_filter = 2
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Column" type="VBoxContainer" parent="UI/DebugDock"]
 margin_left = 16.0
@@ -31,8 +34,20 @@ mouse_filter = 2
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 408.0
-margin_bottom = 102.0
+margin_bottom = 196.0
 mouse_filter = 2
+reference_path = NodePath("../../../../Player/StateMachine/Move")
+properties = PoolStringArray( "velocity", "max_speed", "acceleration" )
+
+[node name="DebugPanel2" parent="UI/DebugDock/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 204.0
+margin_right = 408.0
+margin_bottom = 332.0
+mouse_filter = 2
+reference_path = NodePath("../../../../Player/StateMachine")
+properties = PoolStringArray( "_state_name" )
 
 [node name="Level1" type="Node2D" parent="."]
 
@@ -71,4 +86,6 @@ position = Vector2( 1480, -600 )
 position = Vector2( 1560, 630 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( 518.479, 749.875 )
+position = Vector2( 874.422, 644.574 )
+
+[editable path="Player"]
