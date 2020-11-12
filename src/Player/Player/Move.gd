@@ -5,12 +5,17 @@ Move-related children states can delegate movement to it, or use its utility fun
 """
 
 export var max_speed_default: = Vector2(500.0, 1500.0)
-export var acceleration_default: = Vector2(10000.0, 3000.0)
+export var acceleration_default: = Vector2(100000, 3000.0)
 export var jump_impulse: = 900.0
 
 var acceleration: = acceleration_default
 var max_speed: = max_speed_default
 var velocity: = Vector2.ZERO
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if owner.is_on_floor() and event.is_action_pressed("jump"):
+		_state_machine.transition_to("Move/Air", {impulse = jump_impulse})
 
 
 func _physics_process(delta: float) -> void:

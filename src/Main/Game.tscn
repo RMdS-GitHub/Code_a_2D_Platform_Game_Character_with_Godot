@@ -87,5 +87,6 @@ position = Vector2( 1560, 630 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 874.422, 644.574 )
+collision_mask = 2147483650
 
 [editable path="Player"]
