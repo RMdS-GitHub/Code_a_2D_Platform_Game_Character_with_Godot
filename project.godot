@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://src/Player/Player/Player.gd"
+"path": "res://src/Player/Player.gd"
 }, {
 "base": "Node",
 "class": "State",
@@ -86,7 +86,7 @@ jump={
 
 [layer_names]
 
-2d_render/layer_1="Player"
-2d_render/layer_2="World"
-2d_render/layer_3="Hookable"
-2d_render/layer_4="PassTrough"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="World"
+2d_physics/layer_3="Hookable"
+2d_physics/layer_4="PassThrough"

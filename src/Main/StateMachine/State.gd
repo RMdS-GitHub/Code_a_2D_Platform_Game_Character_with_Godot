@@ -7,22 +7,27 @@ It's up to the user to call the parent state's functions, e.g. 'get_parent().phy
 Use State as a child of a StateMachine node.
 """
 
+
 onready var _state_machine: = _get_state_machine(self)
 
 
 func unhandled_input(event: InputEvent) -> void:
-	return
+	pass
 	
 
 func physics_process(delta: float) -> void:
-	return
+	pass
 	
 	
 func enter(msg: Dictionary = {}) -> void:
-	return
+	pass
+
+
+func exit() -> void:
+	pass
 	
 
 func _get_state_machine(node: Node) -> Node:
-	if node!= null and not node.is_in_group("state_machine"):
+	if node != null and not node.is_in_group("state_machine"):
 		return _get_state_machine(node.get_parent())
 	return node

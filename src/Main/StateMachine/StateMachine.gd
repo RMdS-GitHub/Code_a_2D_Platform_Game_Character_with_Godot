@@ -33,11 +33,11 @@ func transition_to(target_state_path: String, msg: Dictionary = {}) -> void:
 	if not has_node(target_state_path):
 		return
 		
-		var target_state: = get_node(target_state_path)
+	var target_state: = get_node(target_state_path)
 		
-		state.exit()
-		self.state = target_state
-		state.enter(msg)
+	state.exit()
+	self.state = target_state
+	state.enter(msg)
 		
 		
 func set_state(value: State) -> void:

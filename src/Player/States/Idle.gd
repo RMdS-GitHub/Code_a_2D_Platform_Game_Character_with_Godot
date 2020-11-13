@@ -1,9 +1,8 @@
 extends State
 
 
-
 func unhandled_input(event: InputEvent) -> void:
-	var move: = get_parent()
+	var move = get_parent()
 	move.unhandled_input(event)
 	
 
@@ -14,6 +13,7 @@ func physics_process(delta: float) -> void:
 	elif not owner.is_on_floor():
 		_state_machine.transition_to("Move/Air")
 	
+
 func enter(msg: Dictionary = {}) -> void:
 	var move = get_parent()
 	move.enter(msg)
@@ -23,4 +23,4 @@ func enter(msg: Dictionary = {}) -> void:
 	
 	
 func exit() -> void:
-	get_parent().exit
+	get_parent().exit()

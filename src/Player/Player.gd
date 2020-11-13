@@ -1,5 +1,4 @@
 extends KinematicBody2D
-
 class_name Player
 
 onready var state_machine: StateMachine = $StateMachine
