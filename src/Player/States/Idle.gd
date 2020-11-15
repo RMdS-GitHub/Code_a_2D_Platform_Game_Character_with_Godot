@@ -2,9 +2,9 @@ extends State
 
 
 func unhandled_input(event: InputEvent) -> void:
-	var move = get_parent()
-	move.unhandled_input(event)
-	
+	#var move = get_parent()
+	#move.unhandled_input(event)
+	get_parent().unhandled_input(event)
 
 func physics_process(delta: float) -> void:
 	var move: = get_parent()

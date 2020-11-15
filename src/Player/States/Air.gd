@@ -23,8 +23,8 @@ func physics_process(delta: float) -> void:
 	
 	# Landing
 	if owner.is_on_floor():
-		var target_state: = "Move/Idle" if move.get_move_direction().x == 0 else "Move/Run"
-		_state_machine.transition_to(target_state)
+		#var target_state: = "Move/Idle" if move.get_move_direction().x == 0 else "Move/Run"
+		_state_machine.transition_to("Move/Run")
 	
 	
 func enter(msg: Dictionary = {}) -> void:
@@ -54,6 +54,7 @@ func calculate_jump_velocity(impulse: float = 0.0) -> Vector2:
 		move.velocity,
 		move.max_speed,
 		Vector2(0.0, impulse),
+		Vector2.ZERO,
 		1.0,
 		Vector2.UP
 	)
